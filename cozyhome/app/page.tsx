@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface Category {
   src: string;
@@ -7,15 +8,15 @@ interface Category {
 }
 
 const categories: Category[] = [
-  { src: "/food.jpg", alt: "Bahan Makanan", text: "Bahan Makanan" },
-  { src: "/household.jpg", alt: "Peralatan Rumah Tangga", text: "Peralatan Rumah Tangga" },
-  { src: "/cleaning.jpg", alt: "Produk Kebersihan", text: "Produk Kebersihan" },
-  { src: "/personal_care.jpg", alt: "Produk Perawatan Diri", text: "Produk Perawatan Diri" },
-  { src: "/electronics.jpg", alt: "Elektronik Rumah Tangga", text: "Elektronik Rumah Tangga" },
-  { src: "/clothing.jpg", alt: "Pakaian dan Aksesoris", text: "Pakaian dan Aksesoris" },
-  { src: "/baby.jpg", alt: "Perlengkapan Anak", text: "Perlengkapan Anak" },
-  { src: "/health.jpg", alt: "Kesehatan", text: "Kesehatan" },
-  { src: "/stationery.jpg", alt: "Alat Tulis", text: "Alat Tulis" }
+  { src: "/food.jpeg", alt: "Bahan Makanan", text: "Bahan Makanan" },
+  { src: "/household.jpeg", alt: "Peralatan Rumah Tangga", text: "Peralatan Rumah Tangga" },
+  { src: "/cleaning.jpeg", alt: "Produk Kebersihan", text: "Produk Kebersihan" },
+  { src: "/personal_care.jpeg", alt: "Produk Perawatan Diri", text: "Produk Perawatan Diri" },
+  { src: "/electronics.webp", alt: "Elektronik Rumah Tangga", text: "Elektronik Rumah Tangga" },
+  { src: "/clothing.jpeg", alt: "Pakaian dan Aksesoris", text: "Pakaian dan Aksesoris" },
+  { src: "/baby.jpeg", alt: "Perlengkapan Anak", text: "Perlengkapan Anak" },
+  { src: "/health.jpeg", alt: "Kesehatan", text: "Kesehatan" },
+  { src: "/stationery.jpeg", alt: "Alat Tulis", text: "Alat Tulis" }
 ];
 
 export default function Home() {
@@ -27,6 +28,16 @@ export default function Home() {
           placeholder="Search..."
           className="w-3/5 p-3 text-lg border border-gray-300 rounded"
         />
+        <Link 
+            className='dark:bg-dark-2 border-dark dark:border-dark-2 border rounded-md inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium' 
+            href={{
+              pathname:"/loginPage",
+            }}
+            >
+          <button>
+            <strong>Login</strong>
+          </button>
+        </Link>
       </header>
       <div className="flex flex-wrap justify-center w-full max-w-6xl mx-auto mt-5">
         <div className="flex-1 flex flex-wrap gap-5 justify-around bg-gray-100 p-5 rounded-lg">
