@@ -1,6 +1,8 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
-
+import {useState} from "react";
+import Navbar from './components/Navbar';
 interface Category {
   src: string;
   alt: string;
@@ -21,24 +23,11 @@ const categories: Category[] = [
 
 export default function Home() {
   return (
-  <div className="flex flex-col items-center min-h-screen font-sans">
-      <header className="w-full flex justify-center py-5">
-        <input
-          type="text"
-          placeholder="Search..."
-          className="w-3/5 p-3 text-lg border border-gray-300 rounded"
-        />
-        <Link 
-            className='dark:bg-dark-2 border-dark dark:border-dark-2 border rounded-md inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium' 
-            href={{
-              pathname:"/loginPage",
-            }}
-            >
-          <button>
-            <strong>Login</strong>
-          </button>
-        </Link>
-      </header>
+  <div>
+    <div>
+      <Navbar />
+    </div>
+    <div className="flex flex-col items-center min-h-screen font-sans">
       <div className="flex flex-wrap justify-center w-full max-w-6xl mx-auto mt-5">
         <div className="flex-1 flex flex-wrap gap-5 justify-around bg-gray-100 p-5 rounded-lg">
           {categories.map((item, index) => (
@@ -66,6 +55,7 @@ export default function Home() {
           <p className="border-t border-black pt-2 mt-2 font-bold">Total: 45K</p>
         </div>
       </div>
+    </div>
     </div>
   );
 }

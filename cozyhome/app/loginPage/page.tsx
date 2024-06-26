@@ -1,3 +1,4 @@
+'use client'
 import {
   Card,
   CardHeader,
@@ -9,12 +10,17 @@ import {
   Button,
 } from "@material-tailwind/react"
 import Link from 'next/link';
-import navBar from '/navBar'
+import Navbar from '../components/Navbar'
+import { useState } from "react";
 
 export default function loginPage(){
     return(
-        <navBar />
-        <div className="flex min-h-screen flex-col justify-center px-4 py-12 sm:px-6 lg:px-8">
+        <div>
+            <div>
+                <Navbar />
+            </div>
+            <div className="flex min-h-screen flex-col justify-center px-4 py-12 sm:px-6 lg:px-8">
+            
     <div className="sm:mx-auto sm:w-full sm:max-w-md">
         {/* <img className="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company"></img> */}
         <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Login to your account</h2>
@@ -32,9 +38,9 @@ export default function loginPage(){
 
                 <div>
                     <div className="flex items-center justify-between">
-                        <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                        <label htmlFor="password" className="block text-sm font-medium leading-6 text-white">Password</label>
                         <div className="text-sm">
-                            <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">Forgot Password?</a>
+                            <a href="#" className="font-semibold text-indigo-800 hover:text-indigo-500">Forgot Password?</a>
                         </div>
                     </div>
                     <div className="mt-2">
@@ -43,11 +49,13 @@ export default function loginPage(){
                 </div>
 
                 <div>
-                    <button type="submit" className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
+                    <button type="submit" className="flex w-full justify-center rounded-md bg-gray-800 px-3 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
                 </div>
             </form>
         </div>
     </div>
-</div>
+</div>    
+        </div>
+        
     );
 }
