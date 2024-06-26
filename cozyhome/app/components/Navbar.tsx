@@ -16,8 +16,8 @@ const Navbar: React.FC = () => {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
                         <div className="flex-shrink-0">
-                            <Link href="/" className='text-white font-bold'>
-                                Logo
+                            <Link href="/cart" className='text-white font-bold'>
+                                Cart
                             </Link>
                         </div>
                         <div className="hidden md:block">
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
 
             <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <Link href="/" className='text-white font-bold'>
+                    <Link href="/#" className='text-white font-bold'>
                         Home
                     </Link>
                     <Link href="/loginPage" className='text-white font-bold'>
